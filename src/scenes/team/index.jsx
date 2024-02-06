@@ -75,6 +75,10 @@ const Team = () => {
           rows={mockDataTeam}
           columns={columns}
           sx={{
+            [theme.breakpoints.down('sm')]: {
+              maxWidth: "300px",
+              width: "100%"
+            },
             border: "none",
             "& .MuiDataGrid-cell": {
               borderBottom: "none"

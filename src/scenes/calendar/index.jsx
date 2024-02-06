@@ -56,11 +56,12 @@ const Calendar = () => {
 
       <Box
         display="flex"
+        flexDirection={theme.breakpoints.down('md') && "column"}
         justifyContent="space-between"
         mt="10px"
       >
         <Box
-          flex="1 1 20%"
+          flex={theme.breakpoints.down('md') ? "1 1 100%" : "1 1 20%"}
           backgroundColor={colors.primary[400]}
           p="15px"
           borderRadius="4px"
@@ -97,7 +98,7 @@ const Calendar = () => {
 
         <Box
           flex="1 1 100%"
-          ml="15px"
+          ml={theme.breakpoints.down('md') ? undefined : "15px"}
         >
           <FullCalendar
             height="75vh"

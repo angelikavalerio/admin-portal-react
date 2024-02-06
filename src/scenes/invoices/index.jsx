@@ -61,6 +61,10 @@ const Invoices = () => {
           rows={mockDataInvoices}
           columns={columns}
           sx={{
+            [theme.breakpoints.down('sm')]: {
+              maxWidth: "300px",
+              width: "100%"
+            },
             border: "none",
             "& .MuiDataGrid-cell": {
               borderBottom: "none"

@@ -12,7 +12,6 @@ import BarChart from "../../components/BarChart"
 import GeographyChart from "../../components/GeographyChart"
 import StatBox from "../../components/StatBox"
 import ProgressCircle from "../../components/ProgressCircle"
-import { Email } from "@mui/icons-material";
 
 const Dashboard = () => {
   const theme = useTheme()
@@ -23,6 +22,14 @@ const Dashboard = () => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
+        sx={{
+
+          [theme.breakpoints.down('sm')]: {
+            marginBottom: "10px",
+            flexDirection: "column",
+            alignItems: "flex-start"
+          },
+        }}
       >
         <Header title="Dashboard" subtitle="Welcome to your dashboard" />
 
@@ -33,7 +40,12 @@ const Dashboard = () => {
               color: colors.gray[100],
               fontSize: "14px",
               fontWeight: "bold",
-              padding: "10px 20px"
+              padding: "10px 20px",
+
+              [theme.breakpoints.down('sm')]: {
+                marginTop: "10px"
+              },
+
             }}
           >
             <DownloadOutlinedIcon sx={{
@@ -58,6 +70,11 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           display="flex" alignItems="center"
           justifyContent="center"
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <StatBox
             title="12,234"
@@ -77,6 +94,11 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           display="flex" alignItems="center"
           justifyContent="center"
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <StatBox
             title="512,234"
@@ -96,6 +118,11 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           display="flex" alignItems="center"
           justifyContent="center"
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <StatBox
             title="322,234"
@@ -115,6 +142,11 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
           display="flex" alignItems="center"
           justifyContent="center"
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <StatBox
             title="1,512,234"
@@ -137,6 +169,11 @@ const Dashboard = () => {
           gridColumn="span 8"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <Box
             mt="25px"
@@ -173,6 +210,11 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           overflow="auto"
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <Box
             position="sticky"
@@ -234,6 +276,11 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="30px"
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <Typography
             variant="h5"
@@ -269,6 +316,11 @@ const Dashboard = () => {
           gridColumn="span 4"
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <Typography
             variant="h5"
@@ -293,6 +345,11 @@ const Dashboard = () => {
           gridRow="span 2"
           backgroundColor={colors.primary[400]}
           p="30px"
+          sx={{
+            [theme.breakpoints.down('md')]: {
+              gridColumn: "span 12"
+            },
+          }}
         >
           <Typography
             variant="h5"

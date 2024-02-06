@@ -60,15 +60,22 @@ const Contacts = () => {
     }
   ]
 
+  // const matches = useMediaQuery(theme.breakpoints.down('md'));
+
+
   return (
     <Box m="20px">
       <Header title="Contacts" subtitle="List of Contacts for future reference" />
-      <Box mt="10px" height="75vh">
+      <Box mt="10px" height="75vh" width="100%">
         <DataGrid
           rows={mockDataContacts}
           columns={columns}
           slots={{ toolbar: GridToolbar }}
           sx={{
+            [theme.breakpoints.down('sm')]: {
+              maxWidth: "300px",
+              width: "100%"
+            },
             border: "none",
             "& .MuiDataGrid-cell": {
               borderBottom: "none"
